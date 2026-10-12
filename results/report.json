@@ -1,0 +1,19 @@
+{
+  "input_rows": 336,
+  "training_rows": 168,
+  "test_rows": 168,
+  "split": "first 7 days train; later records test",
+  "method": "hour-of-day ordinary least squares energy baseline using occupancy; robust MAD residual threshold",
+  "threshold_rule": "max(3.5 * 1.4826 * training residual MAD, 0.35 kWh)",
+  "test_flags": 3,
+  "synthetic_scenario_evaluation": {
+    "true_positive": 3,
+    "false_positive": 0,
+    "false_negative": 0,
+    "true_negative": 165,
+    "precision": 1.0,
+    "recall": 1.0,
+    "note": "scenario_truth is used only after scoring to evaluate this generated example, never as a model feature"
+  },
+  "limitations": "Synthetic screening baseline only; flags do not establish waste, fault, or a cause."
+}
